@@ -222,6 +222,20 @@ export default function Admin() {
                     <ExternalLink className="w-3 h-3" /> Donate URL
                   </a>
                 )}
+                {/* AI tools toggle */}
+                <button
+                  onClick={() => setAiExpandedId(aiExpandedId === org.id ? null : org.id)}
+                  className="flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg transition-all"
+                  style={{
+                    background: aiExpandedId === org.id ? "rgba(167, 139, 250, 0.12)" : "rgba(30, 50, 80, 0.3)",
+                    border: aiExpandedId === org.id ? "1px solid rgba(167, 139, 250, 0.25)" : "1px solid rgba(30, 50, 80, 0.4)",
+                    color: aiExpandedId === org.id ? "#a78bfa" : "rgba(130, 170, 205, 0.5)",
+                  }}
+                >
+                  <Sparkles className="w-3 h-3" />
+                  AI
+                  {aiExpandedId === org.id ? <ChevronUp className="w-2.5 h-2.5" /> : <ChevronDown className="w-2.5 h-2.5" />}
+                </button>
               </div>
 
               {/* Actions */}
