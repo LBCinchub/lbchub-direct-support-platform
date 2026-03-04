@@ -18,6 +18,8 @@ export default function Submit() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [aiBlurb, setAiBlurb] = useState("");
+  const [aiAboutUs, setAiAboutUs] = useState("");
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
