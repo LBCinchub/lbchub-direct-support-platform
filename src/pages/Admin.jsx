@@ -16,6 +16,7 @@ export default function Admin() {
   const [loading, setLoading] = useState(true);
   const [tab, setTab] = useState("pending");
   const [stats, setStats] = useState({ total: 0, verified: 0, totalClicks: 0, pending: 0 });
+  const [aiExpandedId, setAiExpandedId] = useState(null);
 
   const loadOrgs = async () => {
     setLoading(true);
