@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { base44 } from "@/api/base44Client";
 import { CheckCircle, Send, Shield, AlertCircle } from "lucide-react";
+import AiDescriptionTools from "../components/AiDescriptionTools";
 
 const CATEGORIES = ["Humanitarian", "Education", "Healthcare", "Environment", "Disaster Relief", "Children & Youth", "Food Security", "Human Rights", "Other"];
 

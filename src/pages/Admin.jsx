@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { base44 } from "@/api/base44Client";
 import {
   CheckCircle, XCircle, Shield, ShieldCheck, ShieldOff,
-  Star, StarOff, Trash2, ExternalLink, Clock, TrendingUp,
-  Users, MousePointerClick, BarChart2, RefreshCw
+  Star, StarOff, Trash2, ExternalLink, Clock,
+  Users, MousePointerClick, RefreshCw, Sparkles, ChevronDown, ChevronUp
 } from "lucide-react";
+import AiDescriptionTools from "../components/AiDescriptionTools";
 
 const TABS = ["pending", "approved", "rejected"];
 
