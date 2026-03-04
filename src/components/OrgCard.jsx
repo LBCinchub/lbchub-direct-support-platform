@@ -94,7 +94,9 @@ export default function OrgCard({ org, onClickUpdate }) {
           className="text-sm leading-relaxed mb-4 flex-1"
           style={{ color: "rgba(140, 175, 210, 0.7)" }}
         >
-          {org.description?.length > 120
+          {org.card_blurb
+            ? org.card_blurb
+            : org.description?.length > 120
             ? org.description.slice(0, 120) + "…"
             : org.description}
         </p>
