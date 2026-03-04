@@ -33,7 +33,14 @@ export default function Submit() {
       return;
     }
     setLoading(true);
-    await base44.entities.Organization.create({ ...form, status: "pending", verified: false, click_count: 0 });
+    await base44.entities.Organization.create({
+      ...form,
+      status: "pending",
+      verified: false,
+      click_count: 0,
+      ...(aiBlurb ? { card_blurb: aiBlurb } : {}),
+      ...(aiAboutUs ? { about_us: aiAboutUs } : {}),
+    });
     setLoading(false);
     setSubmitted(true);
   };
