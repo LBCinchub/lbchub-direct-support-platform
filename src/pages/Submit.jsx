@@ -231,6 +231,28 @@ export default function Submit() {
           />
         </div>
 
+        {/* AI Tools */}
+        <AiDescriptionTools
+          orgName={form.name}
+          description={form.description}
+          onApplyBlurb={(text) => setAiBlurb(text)}
+          onApplyAboutUs={(text) => setAiAboutUs(text)}
+        />
+
+        {/* AI applied previews */}
+        {(aiBlurb || aiAboutUs) && (
+          <div
+            className="rounded-xl p-3 space-y-2 text-xs"
+            style={{ background: "rgba(20, 184, 166, 0.05)", border: "1px solid rgba(20, 184, 166, 0.12)" }}
+          >
+            <p className="font-semibold" style={{ color: "rgba(20, 184, 166, 0.8)" }}>
+              ✓ AI content will be saved with this submission:
+            </p>
+            {aiBlurb && <p style={{ color: "rgba(140, 180, 210, 0.7)" }}><span className="font-medium" style={{ color: "rgba(20, 184, 166, 0.6)" }}>Blurb:</span> {aiBlurb}</p>}
+            {aiAboutUs && <p style={{ color: "rgba(140, 180, 210, 0.7)" }}><span className="font-medium" style={{ color: "#60a5fa" }}>About Us:</span> Generated ✓</p>}
+          </div>
+        )}
+
         {/* Error */}
         {error && (
           <div
