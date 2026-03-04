@@ -51,6 +51,7 @@ import Home from './pages/Home';
 import Organizations from './pages/Organizations';
 import Submit from './pages/Submit';
 import Transparency from './pages/Transparency';
+import Admin from './pages/Admin';
 import __Layout from './Layout.jsx';
 
 
@@ -59,6 +60,7 @@ export const PAGES = {
     "Organizations": Organizations,
     "Submit": Submit,
     "Transparency": Transparency,
+    "Admin": Admin,
 }
 
 export const pagesConfig = {
