@@ -315,6 +315,37 @@ export default function Admin() {
                   <Trash2 className="w-3.5 h-3.5" />
                 </button>
               </div>
+
+              {/* AI Tools Panel */}
+              {aiExpandedId === org.id && (
+                <div className="w-full mt-1">
+                  <AiDescriptionTools
+                    orgName={org.name}
+                    description={org.description}
+                    onApplyBlurb={(text) => update(org.id, { card_blurb: text })}
+                    onApplyAboutUs={(text) => update(org.id, { about_us: text })}
+                  />
+                  {(org.card_blurb || org.about_us) && (
+                    <div
+                      className="mt-2 rounded-lg p-3 text-xs space-y-1.5"
+                      style={{ background: "rgba(20, 184, 166, 0.04)", border: "1px solid rgba(20, 184, 166, 0.1)" }}
+                    >
+                      <p className="font-semibold" style={{ color: "rgba(20, 184, 166, 0.7)" }}>Saved AI Content:</p>
+                      {org.card_blurb && (
+                        <p style={{ color: "rgba(140, 180, 210, 0.7)" }}>
+                          <span className="font-medium" style={{ color: "rgba(20, 184, 166, 0.6)" }}>Blurb: </span>{org.card_blurb}
+                        </p>
+                      )}
+                      {org.about_us && (
+                        <p style={{ color: "rgba(140, 180, 210, 0.7)" }}>
+                          <span className="font-medium" style={{ color: "#60a5fa" }}>About Us: </span>
+                          {org.about_us.slice(0, 120)}…
+                        </p>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>
