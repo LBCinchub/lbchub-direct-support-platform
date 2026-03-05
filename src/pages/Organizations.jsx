@@ -18,7 +18,7 @@ export default function Organizations() {
       .finally(() => setLoading(false));
   }, []);
 
-  const filtered = orgs.filter((o) => {
+  const filtered = [...orgs].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0)).filter((o) => {
     const matchSearch =
       search === "" ||
       o.name?.toLowerCase().includes(search.toLowerCase()) ||
