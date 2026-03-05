@@ -9,8 +9,11 @@ export default function Home() {
   const [featured, setFeatured] = useState([]);
 
   useEffect(() => {
-    base44.entities.Organization.filter({ status: "approved", verified: true }, "-click_count", 3)
-      .then(setFeatured)
+    base44.entities.Organization.filter({ status: "approved", verified: true }, "-featured", 3)
+      .then((orgs) => {
+        const sorted = [...orgs].sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+        setFeatured(sorted);
+      })
       .catch(() => {});
   }, []);
 
