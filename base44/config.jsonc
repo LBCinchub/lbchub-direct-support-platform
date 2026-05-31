@@ -1,0 +1,9 @@
+{
+  "name": "LBCHUB \u2013 Direct Support Platform",
+  "site": {
+    "installCommand": "npm install",
+    "buildCommand": "npm run build",
+    "serveCommand": "npm run dev",
+    "outputDirectory": "./dist"
+  }
+}
