@@ -1,0 +1,89 @@
+{
+  "name": "Organization",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Organization name"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "URL to organization logo"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short description of the organization (raw, as submitted)"
+    },
+    "card_blurb": {
+      "type": "string",
+      "description": "AI-generated concise blurb for card display (max ~120 chars)"
+    },
+    "about_us": {
+      "type": "string",
+      "description": "AI-generated detailed About Us section for future detail page"
+    },
+    "website_url": {
+      "type": "string",
+      "description": "Official website URL"
+    },
+    "donation_url": {
+      "type": "string",
+      "description": "Official donation page URL"
+    },
+    "contact_email": {
+      "type": "string",
+      "description": "Contact email for the organization"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country or region"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Humanitarian",
+        "Education",
+        "Healthcare",
+        "Environment",
+        "Disaster Relief",
+        "Children & Youth",
+        "Food Security",
+        "Human Rights",
+        "Other"
+      ],
+      "description": "Category of the organization"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending",
+      "description": "Approval status"
+    },
+    "verified": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the organization is verified by LBCHUB"
+    },
+    "click_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of donate button clicks"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to feature on home page"
+    }
+  },
+  "required": [
+    "name",
+    "website_url",
+    "donation_url",
+    "contact_email",
+    "description"
+  ]
+}
