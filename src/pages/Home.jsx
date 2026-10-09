@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { base44 } from "@/api/base44Client";
-import { Shield, ArrowRight, CheckCircle, Eye, Zap, Lock } from "lucide-react";
+import { Shield, ArrowRight, Eye, Zap, Lock } from "lucide-react";
 import OrgCard from "../components/OrgCard";
 import LbcCharityLogo from "@/components/LbcCharityLogo";
 

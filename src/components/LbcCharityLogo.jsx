@@ -1,6 +1,6 @@
 export const LBC_CHARITY_LOGO_URL = "/brand/lbc-charity-logo-v1.png";
 
-export default function LbcCharityLogo({ size = 32, className = "", containerClassName = "" }) {
+export default function LbcCharityLogo({ size = 32, containerClassName = "" }) {
   return (
     <span
       className={`inline-flex items-center justify-center overflow-hidden shrink-0 rounded-lg ${containerClassName}`}

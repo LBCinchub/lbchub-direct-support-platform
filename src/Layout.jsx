@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { useState } from "react";
-import { Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import LbcCharityLogo from "@/components/LbcCharityLogo";
 
 export default function Layout({ children, currentPageName }) {
