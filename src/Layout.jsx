@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { useState } from "react";
-import { Menu, X, Shield, ExternalLink } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
+import LbcCharityLogo from "@/components/LbcCharityLogo";
 
 export default function Layout({ children, currentPageName }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -37,12 +38,7 @@ export default function Layout({ children, currentPageName }) {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to={createPageUrl("Home")} className="flex items-center gap-2.5">
-              <div
-                className="w-8 h-8 rounded-lg flex items-center justify-center"
-                style={{ background: "rgba(20, 184, 166, 0.15)", border: "1px solid rgba(20, 184, 166, 0.3)" }}
-              >
-                <Shield className="w-4 h-4" style={{ color: "#14b8a6" }} />
-              </div>
+              <LbcCharityLogo size={32} />
               <span className="font-bold text-lg tracking-tight" style={{ color: "#e2f0f9" }}>
                 LBC<span style={{ color: "#14b8a6" }}>HUB</span>
               </span>
@@ -111,7 +107,7 @@ export default function Layout({ children, currentPageName }) {
       >
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <Shield className="w-4 h-4" style={{ color: "#14b8a6" }} />
+            <LbcCharityLogo size={22} />
             <span className="text-sm font-semibold" style={{ color: "#e2f0f9" }}>
               LBC<span style={{ color: "#14b8a6" }}>HUB</span>
             </span>

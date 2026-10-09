@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import LbcCharityLogo from '@/components/LbcCharityLogo';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -21,7 +22,8 @@ const AuthenticatedApp = () => {
   // Show loading spinner while checking app public settings or auth
   if (isLoadingPublicSettings || isLoadingAuth) {
     return (
-      <div className="fixed inset-0 flex items-center justify-center">
+      <div className="fixed inset-0 flex flex-col items-center justify-center gap-4">
+        <LbcCharityLogo size={56} containerClassName="rounded-2xl" />
         <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin"></div>
       </div>
     );

@@ -4,6 +4,7 @@ import { createPageUrl } from "@/utils";
 import { base44 } from "@/api/base44Client";
 import { Shield, ArrowRight, CheckCircle, Eye, Zap, Lock } from "lucide-react";
 import OrgCard from "../components/OrgCard";
+import LbcCharityLogo from "@/components/LbcCharityLogo";
 
 export default function Home() {
   const [featured, setFeatured] = useState([]);
@@ -54,6 +55,11 @@ export default function Home() {
 
       {/* ── Hero ── */}
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 text-center">
+        {/* Brand mark */}
+        <div className="flex justify-center mb-5">
+          <LbcCharityLogo size={64} containerClassName="rounded-2xl" />
+        </div>
+
         {/* Tag */}
         <div
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-6"
