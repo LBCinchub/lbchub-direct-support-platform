@@ -8,14 +8,7 @@ export default function VerifiedBadge({ size = "sm" }) {
   const s = sizes[size];
 
   return (
-    <span
-      className={`inline-flex items-center gap-1 ${s.px} ${s.text} font-semibold rounded-full`}
-      style={{
-        background: "rgba(20, 184, 166, 0.1)",
-        border: "1px solid rgba(20, 184, 166, 0.25)",
-        color: "#14b8a6",
-      }}
-    >
+    <span className={`inline-flex items-center gap-1 ${s.px} ${s.text} font-semibold rounded-full bg-secondary text-primary border border-primary/30`}>
       <ShieldCheck className={s.icon} />
       Verified by LBCHUB
     </span>
